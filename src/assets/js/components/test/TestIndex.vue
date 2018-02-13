@@ -17,5 +17,13 @@
 				</thead>
 				<tbody>
 					<tr v-for="test, index in test">
+						<td>{{ test.prova1 }}</td>
+						<td>{{ test.prova2 }}</td>
+						<td>{{ test.prova3 }}</td>
+						<td>
+							<router-link :to="name: 'editTest', params: {id: test.id}}" class="btn btn-xs btn-default">
+								Editar
+							</router-link>
+							
 				</thead>
 </template>

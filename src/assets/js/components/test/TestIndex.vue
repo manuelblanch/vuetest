@@ -26,7 +26,7 @@
 							</router-link>
 							<a href="#"
 								class="btn btn-xs btn-danger"
-								v-on:click="deleteEntry(company.id, index)">
+								v-on:click="deleteEntry(test.id, index)">
 								Esborrar
 							</a>
 						</td>
@@ -59,7 +59,7 @@
 			methods: {
 				deleteEntry(id, index) {
 					if (confirm("Segur que vols esborrar?")){
-						
+
 					}
 				}
 			}

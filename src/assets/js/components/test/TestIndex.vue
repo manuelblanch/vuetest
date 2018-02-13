@@ -46,6 +46,16 @@
 
 		},
 		mounted() {
-			
+			var app = this;
+			axios.get('/api/v1/test')
+				.then(function (resp) {
+					app.test = resp.data;
+					})
+					.catch(function (resp) {
+						console.log(resp);
+						alert("No s'ha pogut carregar");
+					});
+					
+			}
 		}
 	}

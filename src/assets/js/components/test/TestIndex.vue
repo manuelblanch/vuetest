@@ -55,7 +55,13 @@
 						console.log(resp);
 						alert("No s'ha pogut carregar");
 					});
-					
+			},
+			methods: {
+				deleteEntry(id, index) {
+					if (confirm("Segur que vols esborrar?")){
+						
+					}
+				}
 			}
 		}
 	}

@@ -24,6 +24,28 @@
 							<router-link :to="name: 'editTest', params: {id: test.id}}" class="btn btn-xs btn-default">
 								Editar
 							</router-link>
-							
-				</thead>
+							<a href="#"
+								class="btn btn-xs btn-danger"
+								v-on:click="deleteEntry(company.id, index)">
+								Esborrar
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </template>
+
+<script>
+	export default {
+		data: function () {
+			return {
+				test:[]
+			}
+
+		},
+		mounted() {
+			
+		}
+	}

@@ -34,6 +34,11 @@ public function update(Request $request, $id)
   return response(null, Response::HTTP_OK);
 }
 
+public function destroy($id)
+{
+  Crud::destroy($id);
 
+  return response(null, Response::HTTP_OK);
+}
 
 }

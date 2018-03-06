@@ -25,5 +25,14 @@
         return `/images/${this.color}.png`;
       }
     },
+    methods: {
+      update(val) {
+        this.$emit('update', this.id, val.target.selectedOptions[0].va
+      },
+    del() {
+      this.$emit('delete', this.id);
+    })
+      }
+    }
 
     </script>

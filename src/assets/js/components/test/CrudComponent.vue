@@ -17,3 +17,13 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    computed: {
+      image() {
+        return `/images/${this.color}.png`;
+      }
+    },
+
+    </script>

@@ -100,32 +100,7 @@
     <!-- /.content -->
   </div>
 
-  <script>
-      export default {
-          mounted() {
-              let app = this;
-              let id = app.$route.params.id;
-              app.testId = id;
-              axios.get('/api/v1/test/' + id)
-                  .then(function (resp) {
-                      app.tests = resp.data;
-                  })
-                  .catch(function () {
-                      alert("No es pot carregar")
-                  });
-          },
-          data: function () {
-              return {
-                 testId: null,
-                  test: {
-                      name: '',
-
-                  }
-              }
-          },
-      }
-  </script>
-  <script>
+<script>
 export default {
   data() {
     return {

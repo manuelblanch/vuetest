@@ -36,7 +36,7 @@
     <span class='right floated edit icon' v-on:click="showForm">
       <i class='edit icon'></i>
     </span>
-    /* add the trash icon in below the edit icon in the template */
+    /* */
     <span class='right floated trash icon' v-on:click="deleteTodo(todo)">
       <i class='trash icon'></i>
     </span>
@@ -125,4 +125,36 @@
           },
       }
   </script>
+  <script>
+export default {
+  data() {
+    return {
+      titleText: '',
+      projectText: '',
+      isCreating: false,
+    };
+  },
+  methods: {
+    openForm() {
+      this.isCreating = true;
+    },
+    closeForm() {
+      this.isCreating = false;
+    },
+    sendForm() {
+      if (this.titleText.length > 0 && this.projectText.length > 0) {
+        const title = this.titleText;
+        const project = this.projectText;
+        this.$emit('create-todo', {
+          title,
+          project,
+          done: false,
+        });
+        this.newTodoText = '';
+      }
+      this.isCreating = false;
+    },
+  },
+};
+</script>
 @endsection

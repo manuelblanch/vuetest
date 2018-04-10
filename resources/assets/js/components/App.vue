@@ -36,13 +36,23 @@
 
       },
       read() {
+      window.axios.get('/api/cruds').then(({ data }) => {
+        data.forEach(crud => {
+          this.cruds.push(new Crud(crud));
+        });
+      });
+    },
+  },
+  ...
+  created() {
+    this.read();
 
       },
       update(id, color) {
 
       },
       del(id) {
-        
+
       }
     },
     components: {

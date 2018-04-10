@@ -56,9 +56,12 @@
     });
   },
   ...
-
-
       del(id) {
+
+        window.axios.delete(`/api/cruds/${id}`).then(() => {
+        let index = this.cruds.findIndex(crud => crud.id === id);
+        this.cruds.splice(index, 1);
+    });
 
       }
     },

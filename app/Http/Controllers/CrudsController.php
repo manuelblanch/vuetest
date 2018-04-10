@@ -32,5 +32,8 @@ class CrudsController extends Controller
 
   }
 
-  public function
+  public function destroy {
+    Crud::destroy($id);
+    return response(null, Response::HTTP_OK);
+  }
 }

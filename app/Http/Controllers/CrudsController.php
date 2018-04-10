@@ -9,5 +9,13 @@ use Faker\Generator;
 
 class CrudsController extends Controller
 {
-  // Methods
+
+  public function create {
+    $crud = new Crud();
+    $crud->name = $faker->lexify('test1');
+    $crud->color = $faker->boolean ? 'on' : 'off';
+    $crud->save();
+
+  return response($crud->jsonSerialize(), Response::HTTP_CREATED);
+  }
 }

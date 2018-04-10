@@ -18,4 +18,19 @@ class CrudsController extends Controller
 
   return response($crud->jsonSerialize(), Response::HTTP_CREATED);
   }
+
+  public function index {
+    return response(Crud::all()->jsonSerialize(), Response::HTTP_OK);
+  }
+
+  public function update(Request $request, $id) {
+    $crud = Crud::findOrFail($id);
+    $crud->color = $request->color;
+    $crud->save();
+
+    return response(null, Response::HTTP_OK);
+
+  }
+
+  public function
 }

@@ -49,8 +49,13 @@
 
       },
       update(id, color) {
+        window.axios.put(`/api/cruds/${id}`, { color }).then(() => {
+        this.cruds.find(crud => crud.id === id).color = color;
+    });
+  },
+  ...
 
-      },
+
       del(id) {
 
       }

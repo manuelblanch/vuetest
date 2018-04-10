@@ -33,7 +33,9 @@
     },
     methods: {
       create() {
-
+        windows.axios.get('/api/cruds/create').then(( {data} )) => {
+          this.cruds.push(new Crud(data));
+        }),
       },
       read() {
       window.axios.get('/api/cruds').then(({ data }) => {

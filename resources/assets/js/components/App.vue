@@ -70,3 +70,50 @@
     }
   }
 </script>
+
+<template>
+  <div class="container">
+    <div>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </div>
+  </div>
+</template>
+
+<style>
+.logo {
+  width: 80px;
+  float: left;
+  margin-right: 30px;
+}
+
+.form-group {
+  max-width: 1000px;
+}
+
+  .actions {
+    padding: 15px 0;
+  }
+
+  .glyphicon-euro {
+    font-size: 18px;
+  }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .10s
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+</style>
+
+<script>
+export default {
+  mounted() {
+    console.log('Component mounted.')
+  }
+}
+</script>

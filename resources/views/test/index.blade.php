@@ -19,3 +19,22 @@
       width: 100%;
       background-colour: #01A9DB
     }
+    #mute {
+      position: absolute;
+    }
+    #mute.on {
+      opacity: 0.7;
+      z-index: 1000;
+      background: white;
+      height: 100%;
+      width: 100%;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="mute"></div>
+    <div id="app"></div>
+    <script src="js/app.js"></script>
+  </body>
+  </html>
